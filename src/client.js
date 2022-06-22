@@ -1,6 +1,5 @@
 import { ApolloClient,  InMemoryCache,  gql } from "@apollo/client";
 
-const api = "https://api-ap-southeast-2.graphcms.com/v2/cl4or4nq70qso01xxe94lesn8/master"
 export const query = gql
   `{assembly(where: {id: "cl4orkygu0cld0c1fvt6un8j1"}) {
         name
@@ -31,11 +30,8 @@ export const query = gql
 }
  }
 `
+
 export const client = new ApolloClient({
-    uri: api,
+    uri: "https://api-ap-southeast-2.graphcms.com/v2/cl4or4nq70qso01xxe94lesn8/master",
     cache: new InMemoryCache()
-  });
-
-export default client
-
-export const webApi = client.query({ query: query })
+});
