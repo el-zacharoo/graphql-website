@@ -16,13 +16,14 @@ const slug = () => {
 export const View = () => {
     const view = slug()
     const { data, loading, error } = useQuery(query);
-    console.log(view)
+
+    const filter = data && data.assembly.reference.filter(item => item.name === view)
 
     return (
         <>
-            {data && data.assembly.reference.map((item, i) =>
-                <p>test</p>
-            )}
+            {filter &&
+                <p >{filter[0].name}</p>
+            }
         </>
     )
 }
