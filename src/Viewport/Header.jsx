@@ -25,7 +25,7 @@ export const Header = () => {
                     </Link>
                     <Box>
                         {data.assembly.reference.map((item, i) =>
-                            <Button color="secondary" component={RouterLink} to={`/${item.name}`} key={i}>{item.name}</Button>
+                            <Button color="info" component={RouterLink} to={`/${item.name}`} key={i}>{item.name}</Button>
                         )}
                     </Box>
                 </Toolbar>

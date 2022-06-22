@@ -7,7 +7,6 @@ import Footer from './Footer';
 import Header from './Header';
 
 export const Viewport = ({ children }) => {
-
     return (
         <Box sx={{
             display: 'flex',

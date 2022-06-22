@@ -18,6 +18,7 @@ export const query = gql
             primaryHeader
             subheader
             description
+            __typename
           }
           ... on Section {
             id
@@ -30,7 +31,6 @@ export const query = gql
 }
  }
 `
-
 export const client = new ApolloClient({
     uri: "https://api-ap-southeast-2.graphcms.com/v2/cl4or4nq70qso01xxe94lesn8/master",
     cache: new InMemoryCache()
