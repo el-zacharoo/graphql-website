@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
 import { query } from '../client';
 import { Hero } from '../components/Hero';
+import { Section } from '../components/Section'
 import { Outline } from '../components/Outline'
 
 const slug = () => {
@@ -30,10 +31,7 @@ export const View = () => {
                 <Hero content={{ primaryHeader: header[0].primaryHeader, subheader: header[0].subheader }} />
             }
             {section && section.map((item, i) =>
-                <Box key={i}>
-                    <p >{item.header}</p>
-                    <p >{item.description}</p>
-                </Box>
+                <Section content={{ header: item.header }} key={i} />
             )}
             <Outline visible={loading} />
         </>

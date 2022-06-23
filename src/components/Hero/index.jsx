@@ -2,8 +2,8 @@ import React from 'react';
 
 import Container from "@mui/material/Container";
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
-import { Typography } from '@mui/material';
 
 export const Hero = (props) => {
     const { content } = props;
