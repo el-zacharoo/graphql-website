@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Box from '@mui/material/Box';
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
@@ -31,7 +30,7 @@ export const View = () => {
                 <Hero content={{ primaryHeader: header[0].primaryHeader, subheader: header[0].subheader }} />
             }
             {section && section.map((item, i) =>
-                <Section content={{ header: item.header }} key={i} />
+                <Section content={{ header: item.header, direction: item.direction }} key={i} />
             )}
             <Outline visible={loading} />
         </>

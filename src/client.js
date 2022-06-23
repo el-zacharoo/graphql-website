@@ -24,6 +24,7 @@ export const query = gql
             id
             name
             header
+            direction
           }
       }
     }
