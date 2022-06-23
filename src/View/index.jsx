@@ -24,25 +24,17 @@ export const View = () => {
     const header = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "Hero")
     const section = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "Section")
 
-    console.log(section && section.map(item => item))
-
     return (
         <>
-
-            <>
-                {header &&
-                    <Hero text={{ primaryHeader: header[0].primaryHeader, subheader: header[0].subheader }} />
-                }
-                {section && section.map((item, i) =>
-                    <Box key={i}>
-                        <p >{item.header}</p>
-                        <p >{item.description}</p>
-                    </Box>
-
-                )}
-            </>
-
-
+            {header &&
+                <Hero content={{ primaryHeader: header[0].primaryHeader, subheader: header[0].subheader }} />
+            }
+            {section && section.map((item, i) =>
+                <Box key={i}>
+                    <p >{item.header}</p>
+                    <p >{item.description}</p>
+                </Box>
+            )}
             <Outline visible={loading} />
         </>
     )
