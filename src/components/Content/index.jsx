@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Hero } from '../components/Hero';
-import { Section } from '../components/Section';
+import { Hero } from '../Hero';
+import { Section } from '../Section';
 
 export const Content = (props) => {
     const { content } = props;

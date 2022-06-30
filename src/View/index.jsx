@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 import { query } from '../client';
 import { Outline } from '../components/Outline';
-import Content from './Content'
+import Content from '../components/Content'
 
 export const View = () => {
     const view = slug()
