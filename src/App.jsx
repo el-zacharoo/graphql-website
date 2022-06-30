@@ -15,8 +15,8 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <ApolloProvider client={client} >
-        <CssBaseline />
         <Router>
           <Viewport>
             <Suspense fallback={<Outline visible={true} />}>

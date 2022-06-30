@@ -3,7 +3,7 @@ import React from 'react';
 
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import CardMedia from '@mui/material/CardMedia';
+// import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import * as PropTypes from 'prop-types';
@@ -45,7 +45,7 @@ const Left = ({ content }) => {
             spacing={2}
         >
             <Grid item xs={12} md={6}>
-                <Typography >{content.header}</Typography>
+                <Typography variant="h3" >{content.header}</Typography>
                 <Typography >{content.description}</Typography>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -72,7 +72,7 @@ const Centred = ({ content }) => {
             justifyContent="center"
         >
             <Grid item>
-                <Typography >{content.header}</Typography>
+                <Typography variant="h3" >{content.header}</Typography>
                 <Typography sx={{ display: 'flex', justifyContent: { md: 'center' } }} >{content.description}</Typography>
             </Grid>
             <Grid item sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -103,7 +103,7 @@ const Right = ({ content }) => {
                 } */}
             </Grid>
             <Grid item xs={12} md={6}>
-                <Typography >{content.header}</Typography>
+                <Typography variant="h3" >{content.header}</Typography>
                 <Typography >{content.description}</Typography>
             </Grid>
         </Grid>
