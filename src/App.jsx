@@ -9,7 +9,7 @@ import { Outline } from './components/Outline'
 import { theme } from './theme';
 import Viewport from './Viewport';
 import { client } from './client'
-import { View } from './View'
+import View from './View'
 
 export const App = () => {
 
