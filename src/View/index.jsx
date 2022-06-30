@@ -4,10 +4,8 @@ import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
 import { query } from '../client';
-import { Hero } from '../components/Hero';
-import { Section } from '../components/Section';
 import { Outline } from '../components/Outline';
-import { NotFound } from './NotFound';
+import Content from './Content'
 
 export const View = () => {
     const view = slug()
@@ -16,22 +14,12 @@ export const View = () => {
     const viewFilter = data && data.assembly.reference.filter(item => item.name === view)
     const header = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "Hero")
     const section = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "Section")
-
-    console.log(data)
-
+    const content = { header: header, section: section }
 
     return (
-
         <>
-
-            {header &&
-                <Hero content={{ primaryHeader: header[0].primaryHeader, subheader: header[0].subheader }} />
-            }
-            {section && section.map((item, i) =>
-                <Section content={{ header: item.header, direction: item.direction }} key={i} />
-            )}
+            <Content content={content} />
             <Outline visible={loading} />
-
         </>
     )
 }

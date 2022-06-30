@@ -22,8 +22,6 @@ export const NotFound = () => {
                 component={RouterLink} to="/">
                 Return Home
             </Button>
-
-
         </Stack>
     )
 };
