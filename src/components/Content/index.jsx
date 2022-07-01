@@ -8,9 +8,11 @@ export const Content = (props) => {
     const { content } = props;
 
     const viewFilter = content.data && content.data.assembly.reference.filter(item => item.name === content.view);
-    const header = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "Hero");
-    const section = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "Section");
-    const blog = viewFilter && viewFilter[0].reference.filter(i => i.__typename === "BlogSection");
+    const ref = viewFilter && viewFilter[0].reference
+
+    const header = ref && ref.filter(i => i.__typename === "Hero");
+    const section = ref && ref.filter(i => i.__typename === "Section");
+    const blog = ref && ref.filter(i => i.__typename === "BlogSection");
     console.log(blog)
 
     return (

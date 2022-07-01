@@ -27,7 +27,8 @@ const BlogCard = (props) => {
     return (
         <Grid item sm={3} xs={12} sx={{ border: 1, broderColor: 'primary.main', p: 2, mx: 1 }}>
             <Typography variant="subtitle2" >{content.title}</Typography>
-            <Typography  >{content.description.text}</Typography>
+            <Typography>{content.datePublished}</Typography>
+            <Typography>{content.description.text}</Typography>
         </Grid>
     )
 }
