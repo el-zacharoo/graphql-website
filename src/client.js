@@ -26,8 +26,24 @@ export const query = gql
             header
             direction
           }
+          ... on BlogSection {
+            id
+            blogs {
+              ... on BlogPost {
+                id
+                name
+                title
+                datePublished
+                slug 
+                description {
+                  text
+                }
+              }
+            }
+          } 
       }
     }
+    
   }
 }
  }
