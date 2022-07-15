@@ -9,6 +9,7 @@ export const ButtonProvider = (props) => {
 
     const prepareClickEvent = () => {
         const span = Tracer.startSpan(id);
+        span.addEvent(`Click on ${id} link`)
         span.end();
     };
 
