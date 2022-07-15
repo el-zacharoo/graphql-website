@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -25,10 +26,25 @@ const BlogCard = (props) => {
     const { content } = props;
 
     return (
-        <Grid item sm={3} xs={12} sx={{ border: 1, broderColor: 'primary.main', p: 2, mx: 1 }}>
+        <Grid item xs={12} sm={3} sx={{ border: 1, borderRadius: '4px', borderColor: 'background.paper', p: 2, mx: 1 }}>
             <Typography variant="subtitle2" >{content.title}</Typography>
-            <Typography>{content.datePublished}</Typography>
+            <Typography variant="caption">{content.datePublished}</Typography>
             <Typography>{content.description.text}</Typography>
+            <Button variant="contained" color="secondary">Read More</Button>
         </Grid>
     )
+}
+
+export default BlogSection;
+
+export const Blog = (props) => {
+    const { content } = props;
+    return (
+        <>
+            <Typography variant="subtitle2" >{content.title}</Typography>
+            <Typography variant="caption">{content.datePublished}</Typography>
+            <Typography>{content.description.text}</Typography>
+        </>
+    )
+
 }

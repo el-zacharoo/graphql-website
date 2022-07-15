@@ -13,7 +13,6 @@ export const Content = (props) => {
     const header = ref && ref.filter(i => i.__typename === "Hero");
     const section = ref && ref.filter(i => i.__typename === "Section");
     const blog = ref && ref.filter(i => i.__typename === "BlogSection");
-    console.log(blog)
 
     return (
         <>

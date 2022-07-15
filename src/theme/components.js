@@ -9,8 +9,6 @@ export const components = {
         styleOverrides: {
             contained: {
                 boxShadow: 'none',
-                paddingTop: '0.5rem',
-                paddingBottom: '0.5rem',
                 '&:hover': {
                     boxShadow: 'none',
                 },
