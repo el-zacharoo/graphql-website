@@ -14,9 +14,7 @@ const provider = new WebTracerProvider();
 provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
 provider.addSpanProcessor(new SimpleSpanProcessor(url))
 
-
 export const Tracer = provider.getTracer('zachs-website');
-console.log(url)
 
 registerInstrumentations({
   instrumentations: [
