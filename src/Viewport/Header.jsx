@@ -11,7 +11,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
 
 import { query } from '../client';
-import ButtonProvider from '../components/Button';
+import ButtonProvider from '../components/ButtonProvider';
 
 
 export const Header = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ButtonProvider from '../Button';
+import ButtonProvider from '../ButtonProvider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 

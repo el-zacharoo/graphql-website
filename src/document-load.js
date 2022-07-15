@@ -7,6 +7,7 @@ import { ZipkinExporter } from "@opentelemetry/exporter-zipkin";
 
 const url = new ZipkinExporter({
 	url: 'http://localhost:9411/api/v2/spans', 
+  
 })
 
 const provider = new WebTracerProvider();
