@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button'
+
 import AppBar from '@mui/material/AppBar';
 import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
 
-import { query } from '../client'
+import { query } from '../client';
+import ButtonProvider from '../components/Button'
 
 
 export const Header = () => {
@@ -25,7 +26,7 @@ export const Header = () => {
                     </Link>
                     <Box>
                         {data.assembly.reference.map((item, i) =>
-                            <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to={`/${item.name}`} key={i}>{item.name}</Button>
+                            <ButtonProvider id={item.name} sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to={`/${item.name}`} key={i}>{item.name}</ButtonProvider>
                         )}
                     </Box>
                 </Toolbar>
