@@ -10,7 +10,7 @@ export const ButtonProvider = (props) => {
     const prepareClickEvent = () => {
         const element = document.getElementById(id);
         const onClick = () => {
-            const span = Tracer.startSpan(children);
+            const span = Tracer.startSpan(id);
             span.end();
         };
         element.addEventListener('click', onClick);
