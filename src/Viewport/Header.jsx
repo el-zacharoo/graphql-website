@@ -11,7 +11,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
 
 import { query } from '../client';
-import ButtonProvider from '../components/ButtonProvider';
+import Button from '../components/Button';
 
 
 export const Header = () => {
@@ -26,7 +26,7 @@ export const Header = () => {
                     </Link>
                     <Box>
                         {data.assembly.reference.map((item, i) =>
-                            <ButtonProvider id={item.name} sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to={`/${item.name}`} key={i}>{item.name}</ButtonProvider>
+                            <Button id={item.name} sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to={`/${item.name}`} key={i}>{item.name}</Button>
                         )}
                     </Box>
                 </Toolbar>

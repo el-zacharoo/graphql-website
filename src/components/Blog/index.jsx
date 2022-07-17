@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ButtonProvider from '../ButtonProvider';
+import Button from '../Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -30,7 +30,7 @@ const BlogCard = (props) => {
             <Typography variant="subtitle2" >{content.title}</Typography>
             <Typography variant="caption">{content.datePublished}</Typography>
             <Typography>{content.description.text}</Typography>
-            <ButtonProvider id={content.title} variant="contained" color="secondary">Read More</ButtonProvider>
+            <Button id={content.title} variant="contained" color="secondary">Read More</Button>
         </Grid>
     )
 }

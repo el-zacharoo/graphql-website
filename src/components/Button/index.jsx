@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Button from '@mui/material/Button';
+import { Button as Btn } from '@mui/material';
 
 import { Tracer } from '../../document-load';
 
-export const ButtonProvider = (props) => {
+export const Button = (props) => {
     const { children, id } = props;
 
     const prepareClickEvent = () => {
@@ -14,9 +14,9 @@ export const ButtonProvider = (props) => {
     };
 
     return (
-        <Button id={id} onClick={() => prepareClickEvent()} {...props}>
+        <Btn id={id} onClick={() => prepareClickEvent()} {...props}>
             {children}
-        </Button>
+        </Btn>
     )
 }
-export default ButtonProvider; 
+export default Button; 
