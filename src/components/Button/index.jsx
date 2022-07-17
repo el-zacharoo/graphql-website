@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button as Btn } from '@mui/material';
+import { Button as MuiButton } from '@mui/material';
 
 import { Tracer } from '../../document-load';
 
@@ -14,9 +14,9 @@ export const Button = (props) => {
     };
 
     return (
-        <Btn id={id} onClick={() => prepareClickEvent()} {...props}>
+        <MuiButton id={id} onClick={() => prepareClickEvent()} {...props}>
             {children}
-        </Btn>
+        </MuiButton>
     )
 }
 export default Button; 
